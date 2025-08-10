@@ -1,0 +1,118 @@
+/* Content Cards */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f2f5;
+}
+
+.sectionIcon {
+  width: 35px;
+  height: 35px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #293c7a, #1890ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.sectionTitle {
+  font-size: 25px;
+  color: #293c7a;
+  font-weight: 600;
+}
+
+/* Reviews Section */
+.reviewsSection {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+  margin-top: 30px;
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.reviewItem {
+  background: #f8f9fc;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #eee;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.reviewerName {
+  font-weight: 600;
+  color: #293c7a;
+  font-size: 16px;
+}
+
+.reviewRating {
+  color: #f67a39;
+}
+
+.reviewText {
+  color: #555;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .statsRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .calendarGrid {
+    gap: 4px;
+  }
+  
+  .slotsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+  }
+  
+  .teacherName {
+    font-size: 2rem;
+  }
+  
+  .profileAvatar {
+    width: 120px;
+    height: 120px;
+    font-size: 2.5rem;
+    top: -60px;
+  }
+  
+  .teacherDetails {
+    margin-top: 70px;
+  }
+  
+  .profileInfoSection {
+    padding: 30px 20px;
+  }
+  
+  .contentCard {
+    padding: 20px;
+  }
+  
+  .specializations {
+    justify-content: center;
+  }
+}

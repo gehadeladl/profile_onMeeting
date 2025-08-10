@@ -1,0 +1,270 @@
+
+/* Content Cards */
+.contentCard {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+  margin-bottom: 20px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f2f5;
+}
+
+.sectionIcon {
+  width: 35px;
+  height: 35px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #293c7a, #1890ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.sectionTitle {
+  font-size: 25px;
+  color: #293c7a;
+  font-weight: 600;
+}
+
+/* Calendar Styles */
+
+.wrapperCalendar{
+  display: flex;
+  gap: 20px;
+}
+.calendarContainer {
+  background: #f8f9fc;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+  width: 50%;
+}
+
+.calendarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.monthYear {
+  font-weight: bold;
+  color: #293c7a;
+  font-size: 16px;
+}
+
+.navBtn {
+  background: #293c7a;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.navBtn:hover {
+  background: #f67a39;
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.dayHeader {
+  text-align: center;
+  font-weight: normal;
+  color: #293c7a;
+  padding: 10px;
+  font-size: 14px;
+  width: 46px;
+}
+
+.calendarDay {
+  aspect-ratio: 1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  background: white;
+}
+
+.calendarDay.otherMonth {
+  color: #ccc;
+  cursor: default;
+}
+
+.calendarDay.today {
+  background: #1890ff;
+  color: white;
+}
+
+.calendarDay.available {
+  background: #293c7a;
+  color: white;
+  cursor: pointer;
+}
+
+.calendarDay.available:hover {
+  background: #f67a39;
+  transform: scale(1.1);
+}
+
+.calendarDay.selected {
+  background: #f67a39 !important;
+  transform: scale(1.1);
+}
+
+.calendarDay.hasSlots::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 6px;
+  height: 6px;
+  background: #f67a39;
+  border-radius: 50%;
+}
+
+.calendarDay.available.hasSlots::after {
+  background: white;
+}
+
+/* Time Slots */
+.timeSlots {
+  margin-top: 20px;
+}
+
+.selectedDate {
+  font-weight: 600;
+  color: #293c7a;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: rgba(41, 60, 122, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.slotsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.timeSlot {
+  background: white;
+  border: 2px solid #e0e6ed;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.timeSlot:hover {
+  border-color: #1890ff;
+  background: #f0f8ff;
+}
+
+.timeSlot.selected {
+  background: #293c7a;
+  color: white;
+  border-color: #293c7a;
+}
+
+/* Booking Section */
+.bookingInfo {
+  background: linear-gradient(135deg, #293c7a, #1890ff);
+  color: white;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  width: 50%;
+}
+
+.priceDisplay {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.priceLabel {
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.bookBtn {
+  width: 100%;
+  background: #f67a39;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.bookBtn:hover:not(:disabled) {
+  background: #e5682f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(246, 122, 57, 0.4);
+}
+
+.bookBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.contactInfo {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) { 
+  .calendarGrid {
+    gap: 4px;
+  }
+  
+  .slotsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+  }
+
+  .contentCard {
+    padding: 20px;
+  }
+
+}

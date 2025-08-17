@@ -26,8 +26,8 @@
 }
 
 .profileAvatar {
-  width: 110px;
-  height: 110px;
+  width: 130px;
+  height: 130px;
   border-radius: 7px;
   border: 3px solid #fff;
   position: absolute;
@@ -42,43 +42,78 @@
 }
 
 .teacherDetails {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .teacherName {
-  font-size: 20px;
+  font-size: 25px;
   color: #293c7a;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
 .teacherTitle {
-  font-size:16px;
+  font-size:20px;
   color: #f67a39;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 .teacherBio {
   color: #666;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   margin-bottom: 8px;
 }
 
-
-.but {
-  background: linear-gradient(135deg, #293c7a, #1890ff);
-  color: white;
-  padding: 7px 22px;
-  border-radius: 25px;
-  font-size: 14px ;
-  cursor: pointer;
-  transition: 0.4s;
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  -ms-transition: 0.4s;
-  -o-transition: 0.4s;
+.ratingSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 30px;
 }
-.but:hover{
-  opacity: 0.9;
+
+.stars {
+  color: #f67a39;
+  font-size: 1.5rem;
+}
+
+.ratingText {
+  color: #666;
+  font-size: 1rem;
+}
+
+.statsRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-top: 2px solid #f0f2f5;
+  margin-top: 25px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  width: 150px;
+  text-align: center;
+  border: 1px solid #eee;
+  padding: 25px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.statNumber {
+  font-size: 25px;
+  font-weight: bold;
+  color: #293c7a;
+  margin-bottom: 10px;
+}
+
+.statLabel {
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 5px;
 }

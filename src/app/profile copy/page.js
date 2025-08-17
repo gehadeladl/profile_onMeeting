@@ -1,6 +1,8 @@
 import React from "react";
 import ProfileHeader from "./_components/ProfileHeader";
 import ProfileAbout from "./_components/ProfileAbout";
+import BookingCalendar from "./_components/BookingCalendar";
+import ReviewsSection from "./_components/ReviewsSection";
 
 const Profile = () => {
   //   data
@@ -71,7 +73,12 @@ const Profile = () => {
           <div className="lg:col-span-12">
             <ProfileAbout teacher={teacherData} />
           </div>
+          <div className="lg:col-span-12">
+            <BookingCalendar teacher={teacherData} />
+          </div>
         </div>
+
+        <ReviewsSection reviews={reviewsData} />
       </div>
     </div>
   );

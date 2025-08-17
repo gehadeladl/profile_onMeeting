@@ -16,8 +16,8 @@
 }
 
 .sectionIcon {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   border-radius: 8px;
   background: linear-gradient(135deg, #293c7a, #1890ff);
   display: flex;
@@ -31,7 +31,7 @@
 }
 
 .sectionTitle {
-  font-size: 25px;
+  font-size: 20px;
   color: #293c7a;
   font-weight: bold;
 }
@@ -40,58 +40,7 @@
 
 .aboutContent {
   color: #555;
-  font-size: 16px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 2;
   margin-bottom: 25px;
-}
-
-.subTitle {
-  color: #293c7a;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.specializations {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 25px;
-}
-
-.specTag {
-  background: linear-gradient(135deg, #293c7a, #1890ff);
-  color: white;
-  padding: 10px 18px;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.experienceList {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.experienceItem {
-  background: #f8f9fc;
-  border-radius: 8px;
-  padding: 20px;
-  border: 1px solid #eee;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-}
-
-.expTitle {
-  font-weight: 600;
-  color: #293c7a;
-  margin-bottom: 5px;
-  font-size: 16px;
-}
-
-.expDetails {
-  color: #666;
-  font-size: 14px;
 }

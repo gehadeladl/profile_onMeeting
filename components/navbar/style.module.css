@@ -1,0 +1,30 @@
+.wrapperNavbar{
+    padding: 16px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 1px 1px 8px -6px #5232ca;
+    margin-bottom: 6px;
+}
+
+.wrapperNavbar button{
+    font-size: 14px;
+    background-color: var(--default-color3--);
+    color: #fff;
+    cursor: pointer;
+    padding:7px 15px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.wrapperNavbar button:hover{
+    opacity: 0.9;
+}

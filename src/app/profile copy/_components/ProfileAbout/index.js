@@ -16,6 +16,25 @@ const ProfileAbout = ({ teacher }) => {
         الصعبة سهلة ومفهومة لجميع طلابي. أستخدم طرق تدريس حديثة وتفاعلية لضمان
         وصول المعلومة بأفضل شكل ممكن.
       </div>
+
+      <h4 className={styles.subTitle}>التخصصات:</h4>
+      <div className={styles.specializations}>
+        {teacher.specializations.map((spec, index) => (
+          <span key={index} className={styles.specTag}>
+            {spec}
+          </span>
+        ))}
+      </div>
+
+      <h4 className={styles.subTitle}>الخبرات:</h4>
+      <div className={styles.experienceList}>
+        {teacher.experiences.map((exp, index) => (
+          <div key={index} className={styles.experienceItem}>
+            <div className={styles.expTitle}>{exp.title}</div>
+            <div className={styles.expDetails}>{exp.details}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

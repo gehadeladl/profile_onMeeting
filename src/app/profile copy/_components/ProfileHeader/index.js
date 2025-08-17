@@ -4,11 +4,8 @@ import styles from "./style.module.css";
 import Image from "next/image";
 import { Upload } from "antd";
 import ImgCrop from "antd-img-crop";
-import { useRouter } from "next/navigation";
 
 const ProfileHeader = ({ teacher }) => {
-  const router = useRouter();
-
   const [fileList, setFileList] = useState([]);
   const onChange = ({ fileList: newFileList }) => {
     setFileList(newFileList);
@@ -59,16 +56,37 @@ const ProfileHeader = ({ teacher }) => {
         </div>
 
         <div className={styles.teacherDetails}>
-          <h1 className={styles.teacherName}> جهاد العدل </h1>
-          <h2 className={styles.teacherTitle}> المدير التقني للفريق </h2>
-          <p className={styles.teacherBio}> المنصوره - مصر </p>
-          <button
-            className={styles.but}
-            onClick={() => router.push("/booking_calendar")}
-          >
-            {" "}
-            حجز موعد{" "}
-          </button>
+          <h1 className={styles.teacherName}>{teacher.name}</h1>
+          <h2 className={styles.teacherTitle}>{teacher.title}</h2>
+          <p className={styles.teacherBio}>{teacher.bio}</p>
+
+          <div className={styles.ratingSection}>
+            <div className={styles.stars}>{renderStars(teacher.rating)}</div>
+            <span className={styles.ratingText}>
+              {teacher.rating} ({teacher.totalReviews} تقييم)
+            </span>
+          </div>
+
+          <div className={styles.statsRow}>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>
+                {teacher.totalStudents}+
+              </span>
+              <div className={styles.statLabel}>طالب</div>
+            </div>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>{teacher.experience}</span>
+              <div className={styles.statLabel}>سنوات خبرة</div>
+            </div>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>{teacher.successRate}%</span>
+              <div className={styles.statLabel}>معدل النجاح</div>
+            </div>
+            <div className={styles.statItem}>
+              <span className={styles.statNumber}>{teacher.rating}</span>
+              <div className={styles.statLabel}>التقييم</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

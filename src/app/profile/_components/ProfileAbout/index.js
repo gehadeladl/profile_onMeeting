@@ -6,7 +6,7 @@ const ProfileAbout = ({ teacher }) => {
   return (
     <div className={styles.contentCard}>
       <div className={styles.sectionHeader}>
-        <div className={styles.sectionIcon}>📚</div>
+        {/* <div className={styles.sectionIcon}>📚</div> */}
         <h3 className={styles.sectionTitle}>نبذة عني</h3>
       </div>
 

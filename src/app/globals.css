@@ -1,36 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&family=Noto+Sans:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&family=Noto+Sans:wght@300;400;500&display=swap");
 
 @import "tailwindcss";
 
 :root {
-    --default-color--: #293c7a;
-    --default-color2--: #f67a39;
-    --default-color3--: #1890ff;
-    --default-color4--: #cbc1f1;
-    --default-font-ar--: 'Noto Kufi Arabic', 'Noto Sans', sans-serif;
-    --default-font-en--: 'Noto Sans', 'Noto Kufi Arabic', sans-serif;
+  --default-color--: #293c7a;
+  --default-color2--: #f67a39;
+  --default-color3--: #1890ff;
+  --default-color4--: #cbc1f1;
+  --default-font-ar--: "Noto Kufi Arabic", "Noto Sans", sans-serif;
+  --default-font-en--: "Noto Sans", "Noto Kufi Arabic", sans-serif;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    direction: rtl;
-    text-align: right;
-    font-family: 'Noto Kufi Arabic' !important;
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+  text-align: right;
+  font-family: "Noto Kufi Arabic" !important;
+}
+.ant-input {
+  font-family: "Noto Kufi Arabic" !important;
+}
+.ant-upload.ant-upload-select {
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 50% !important;
+  border: 1px solid #fff !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
+  background-color: #fff !important;
 }
 
-.ant-upload-wrapper{
-    width: 100%;
-    height: 100%;
+.ant-upload.ant-upload-select svg {
+  color: var(--default-color3--) !important;
+  cursor: pointer;
+  font-size: 17px;
 }
 
-.ant-upload-list-item-container , 
-.ant-upload-select{
-    width: 100% !important;
-    height: 200px !important;
-}
-
-.ant-upload-wrapper *{
-    border-width: 0 !important;
-    height: 200px !important;
+.ant-upload-wrapper {
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }

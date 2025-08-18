@@ -12,8 +12,8 @@
 }
 
 .coverSection {
-  height: 200px;
-  background: var(--default-color3--) ;
+  background-size: cover;
+  height: 190px;
   position: relative;
   display: flex;
   align-items: center;
@@ -32,7 +32,7 @@
   border: 3px solid #fff;
   position: absolute;
   top: -65px;
-  right: 100px ;
+  right: 100px;
   transform: translateX(50%);
   overflow: hidden;
   -webkit-border-radius: 7px;
@@ -53,32 +53,42 @@
 }
 
 .teacherTitle {
-  font-size:16px;
-  color: #f67a39;
+  font-size: 14px;
+  color: #666;
   margin-bottom: 5px;
 }
 
 .teacherBio {
   color: #666;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
   margin-bottom: 8px;
 }
 
-
 .but {
-  background: linear-gradient(135deg, #293c7a, #1890ff);
+  background: var(--default-color3--);
   color: white;
   padding: 7px 22px;
-  border-radius: 25px;
-  font-size: 14px ;
+  border-radius: 20px;
+  font-size: 14px;
   cursor: pointer;
   transition: 0.4s;
   -webkit-transition: 0.4s;
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
-.but:hover{
-  opacity: 0.9;
+.but:hover {
+  opacity: 0.8;
+}
+
+.coverSection img {
+  width: 100% !important;
 }

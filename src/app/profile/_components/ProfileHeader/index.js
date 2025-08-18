@@ -2,56 +2,49 @@
 import React, { useState } from "react";
 import styles from "./style.module.css";
 import Image from "next/image";
-import { Upload } from "antd";
-import ImgCrop from "antd-img-crop";
 import { useRouter } from "next/navigation";
+
+import {
+  CameraFilled,
+  CarryOutTwoTone,
+  ScheduleFilled,
+} from "@ant-design/icons";
+import { Upload } from "antd";
 
 const ProfileHeader = ({ teacher }) => {
   const router = useRouter();
 
   const [fileList, setFileList] = useState([]);
-  const onChange = ({ fileList: newFileList }) => {
-    setFileList(newFileList);
-  };
-  const onPreview = async (file) => {
-    let src = file.url;
-    if (!src) {
-      src = await new Promise((resolve) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(file.originFileObj);
-        reader.onload = () => resolve(reader.result);
-      });
-    }
-    const image = new Image();
-    image.src = src;
-    const imgWindow = window.open(src);
-    imgWindow?.document.write(image.outerHTML);
-  };
-
-  const renderStars = (rating) => {
-    return "★".repeat(Math.floor(rating)) + "☆".repeat(5 - Math.floor(rating));
-  };
+  const handleChange = ({ fileList: newFileList }) => console.log(newFileList);
+  const uploadButton = (
+    <button style={{ border: 0, background: "none" }} type="button">
+      <CameraFilled />
+    </button>
+  );
 
   return (
     <div className={styles.profileHeader}>
-      <div className={styles.coverSection}>
-        <ImgCrop rotationSlider>
-          <Upload
-            action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"
-            listType="picture-card"
-            fileList={fileList}
-            onChange={onChange}
-            onPreview={onPreview}
-          >
-            {fileList.length < 1 && "+ Upload"}
-          </Upload>
-        </ImgCrop>
+      <div
+        className={styles.coverSection}
+        style={{
+          backgroundImage:
+            "url(https://media.licdn.com/dms/image/v2/D4E3DAQH-eOnIP_MZYg/image-scale_191_1128/B4EZWjs6i.GwAc-/0/1742208215677/vodafone_cover?e=1756119600&v=beta&t=1SgmL6jYtSdQHVv1oUVLEDlBmPRFRroWuai5GK0PlpY)",
+        }}
+      >
+        <Upload
+          action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"
+          listType="picture-card"
+          fileList={fileList}
+          onChange={handleChange}
+        >
+          {fileList.length >= 1 ? null : uploadButton}
+        </Upload>
       </div>
 
       <div className={styles.profileInfoSection}>
         <div className={styles.profileAvatar}>
           <Image
-            src="/images/avatar.png"
+            src="/images/vodafone_logo.jpg"
             width={500}
             height={500}
             alt="avatar profile onMeeting"
@@ -66,8 +59,8 @@ const ProfileHeader = ({ teacher }) => {
             className={styles.but}
             onClick={() => router.push("/booking_calendar")}
           >
-            {" "}
-            حجز موعد{" "}
+            <ScheduleFilled />
+            <span>حجز موعد</span>
           </button>
         </div>
       </div>

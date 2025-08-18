@@ -1,0 +1,70 @@
+.wrapperNavbar {
+  padding: 8px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1px 1px 8px -6px #5232ca;
+  margin-bottom: 6px;
+}
+
+.wrapperNavbar > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.wrapperNavbar > div:first-child {
+  justify-content: flex-start;
+}
+.wrapperNavbar > div:last-child {
+  justify-content: flex-end;
+}
+.wrapperNavbar > div:last-child img {
+  border: 1px solid #ddd;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+.wrapperNavbar > div input {
+  width: 200px;
+  height: 35px;
+}
+.wrapperNavbar button span {
+  display: block;
+  margin-top: 5px;
+  font-size: 13px;
+  color: #666;
+}
+.wrapperNavbar button svg {
+  font-size: 18px;
+  color: #666;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.wrapperNavbar button {
+  cursor: pointer;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+
+.wrapperNavbar button:hover {
+  opacity: 0.9;
+}
+
+.wrapperNavbar button:hover svg {
+  color: #000;
+}

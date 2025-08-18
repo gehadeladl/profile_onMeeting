@@ -1,4 +1,4 @@
-import Navbar from "../../components/navbar";
+import Navbar from "./_components/navbar";
 import "./globals.css";
 import { Noto_Kufi_Arabic } from "next/font/google";
 

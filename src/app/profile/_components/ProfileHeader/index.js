@@ -3,12 +3,9 @@ import React, { useState } from "react";
 import styles from "./style.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { GoPlus } from "react-icons/go";
 
-import {
-  CameraFilled,
-  CarryOutTwoTone,
-  ScheduleFilled,
-} from "@ant-design/icons";
+import { CameraFilled } from "@ant-design/icons";
 import { Upload } from "antd";
 
 const ProfileHeader = ({ teacher }) => {
@@ -26,10 +23,10 @@ const ProfileHeader = ({ teacher }) => {
     <div className={styles.profileHeader}>
       <div
         className={styles.coverSection}
-        style={{
-          backgroundImage:
-            "url(https://media.licdn.com/dms/image/v2/D4E3DAQH-eOnIP_MZYg/image-scale_191_1128/B4EZWjs6i.GwAc-/0/1742208215677/vodafone_cover?e=1756119600&v=beta&t=1SgmL6jYtSdQHVv1oUVLEDlBmPRFRroWuai5GK0PlpY)",
-        }}
+        // style={{
+        //   backgroundImage:
+        //     "url(https://media.licdn.com/dms/image/v2/D4E3DAQH-eOnIP_MZYg/image-scale_191_1128/B4EZWjs6i.GwAc-/0/1742208215677/vodafone_cover?e=1756119600&v=beta&t=1SgmL6jYtSdQHVv1oUVLEDlBmPRFRroWuai5GK0PlpY)",
+        // }}
       >
         <Upload
           action="https://660d2bd96ddfa2943b33731c.mockapi.io/api/upload"
@@ -44,7 +41,7 @@ const ProfileHeader = ({ teacher }) => {
       <div className={styles.profileInfoSection}>
         <div className={styles.profileAvatar}>
           <Image
-            src="/images/vodafone_logo.jpg"
+            src="/images/user.jpg"
             width={500}
             height={500}
             alt="avatar profile onMeeting"
@@ -52,16 +49,23 @@ const ProfileHeader = ({ teacher }) => {
         </div>
 
         <div className={styles.teacherDetails}>
-          <h1 className={styles.teacherName}> جهاد العدل </h1>
-          <h2 className={styles.teacherTitle}> المدير التقني للفريق </h2>
-          <p className={styles.teacherBio}> المنصوره - مصر </p>
-          <button
-            className={styles.but}
-            onClick={() => router.push("/booking_calendar")}
-          >
-            <ScheduleFilled />
-            <span>حجز موعد</span>
-          </button>
+          <div>
+            <h1 className={styles.teacherName}> جهاد العدل </h1>
+            <h2 className={styles.teacherTitle}> المدير التقني للفريق </h2>
+            <p className={styles.teacherBio}> المنصوره - مصر </p>
+          </div>
+          <div>
+            <button
+              className={styles.but}
+              onClick={() => router.push("/booking_calendar")}
+            >
+              <span>حجز موعد</span>
+            </button>
+            <button className={styles.but}>
+              <GoPlus />
+              <span> متابعه </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

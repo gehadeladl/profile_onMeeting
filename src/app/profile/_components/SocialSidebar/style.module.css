@@ -1,0 +1,40 @@
+.wrapperSocialSidebar {
+  background: white;
+  border-radius: 20px;
+  /* padding: 30px; */
+  box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+  overflow: hidden;
+  height: 370px;
+}
+.wrapperSocialSidebar h6 {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  color: var(--default-color--);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.Social {
+  padding: 20px;
+}
+
+.Social p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.Social p svg {
+  color: #a9a8a8;
+  font-size: 15px;
+}
+.Social p span {
+  color: #666;
+  font-size: 13px;
+  margin: 0 5px 0 10px;
+}
+
+.Social p a {
+  font-size: 13px;
+  color: var(--default-color3--);
+}

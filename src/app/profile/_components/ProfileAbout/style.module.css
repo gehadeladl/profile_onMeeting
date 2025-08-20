@@ -31,7 +31,7 @@
 }
 
 .sectionTitle {
-  font-size: 20px;
+  font-size: 16px;
   color: #293c7a;
   font-weight: bold;
 }
@@ -40,7 +40,7 @@
 
 .aboutContent {
   color: #555;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 2;
   margin-bottom: 25px;
 }

@@ -4,7 +4,7 @@ import styles from "./style.module.css";
 
 const ProfileAbout = ({ teacher }) => {
   return (
-    <div className={styles.contentCard}>
+    <div className={`${styles.contentCard} mt-[40px] lg:mt-0`}>
       <div className={styles.sectionHeader}>
         {/* <div className={styles.sectionIcon}>📚</div> */}
         <h3 className={styles.sectionTitle}>نبذة عني</h3>

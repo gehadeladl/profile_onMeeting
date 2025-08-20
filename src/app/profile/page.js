@@ -1,6 +1,7 @@
 import React from "react";
 import ProfileHeader from "./_components/ProfileHeader";
 import ProfileAbout from "./_components/ProfileAbout";
+import SocialSidebar from "./_components/SocialSidebar";
 
 const Profile = () => {
   //   data
@@ -64,14 +65,16 @@ const Profile = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-6 max-w-6xl">
-        <ProfileHeader teacher={teacherData} />
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-          <div className="lg:col-span-12">
-            <ProfileAbout teacher={teacherData} />
+      <div className="container mx-auto px-4 py-6 max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-8 mt-8">
+          <div className="lg:col-span-2">
+            <ProfileHeader teacher={teacherData} />
           </div>
+          <aside className="lg:col-span-1">
+            <SocialSidebar social={teacherData.social} />
+          </aside>
         </div>
+        <ProfileAbout teacher={teacherData} />
       </div>
     </div>
   );

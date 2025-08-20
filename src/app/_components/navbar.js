@@ -6,6 +6,8 @@ import { BarsOutlined } from "@ant-design/icons";
 import { Drawer, Dropdown, Input, Space } from "antd";
 import Menu from "./menu/menu";
 
+const { Search } = Input;
+
 const Navbar = () => {
   // state
 
@@ -62,53 +64,58 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <div className={styles.wrapperNavbar}>
-      <div className={styles.wrapperLogo}>
-        <Image
-          src="/images/logoiconhome.png"
-          width={50}
-          height={50}
-          alt="logo onMeeting"
-        />
-        <Input placeholder="بحث عن مستخدم" />
-      </div>
-      <div className={styles.menuNavbar}>
-        <Menu />
-      </div>
-
-      <div className={styles.infoUser}>
-        <button onClick={showDrawer}>
-          <BarsOutlined />
-        </button>
-        <div className={styles.wrapperMenuRes}>
-          <Drawer
-            title=""
-            closable={{ "aria-label": "Close Button" }}
-            onClose={onClose}
-            open={open}
-          >
-            <Menu />
-          </Drawer>
+    <div style={{ boxShadow: "1px 1px 8px -6px #5232ca" }}>
+      <div
+        className={`container mx-auto px-4 py-6 max-w-7xl ${styles.wrapperNavbar}`}
+      >
+        <div className={`${styles.wrapperLogo} wrapperLogoNav`}>
+          <Image
+            src="/images/logoiconhome.png"
+            width={40}
+            height={40}
+            alt="logo onMeeting"
+          />
+          {/* <Input placeholder="بحث عن مستخدم" /> */}
+          <Search placeholder="بحث عن مستخدم" />
         </div>
-        <div className={`${styles.wrapperImageUser} `}>
-          <Dropdown
-            overlayClassName="wrapperImageUser"
-            menu={{
-              items,
-            }}
-            trigger={["click"]}
-          >
-            <a onClick={(e) => e.preventDefault()}>
-              <Space>
-                <Image
-                  src="/images/avatar.png"
-                  width={40}
-                  height={40}
-                  alt="user onMeeting"
-                />
-              </Space>
-            </a>
-          </Dropdown>
+        <div className={styles.menuNavbar}>
+          <Menu />
+        </div>
+
+        <div className={styles.infoUser}>
+          <button onClick={showDrawer}>
+            <BarsOutlined />
+          </button>
+          <div className={styles.wrapperMenuRes}>
+            <Drawer
+              title=""
+              closable={{ "aria-label": "Close Button" }}
+              onClose={onClose}
+              open={open}
+            >
+              <Menu />
+            </Drawer>
+          </div>
+          <div className={`${styles.wrapperImageUser} `}>
+            <Dropdown
+              overlayClassName="wrapperImageUser"
+              menu={{
+                items,
+              }}
+              trigger={["click"]}
+            >
+              <a onClick={(e) => e.preventDefault()}>
+                <Space>
+                  <Image
+                    src="/images/avatar.png"
+                    width={40}
+                    height={40}
+                    alt="user onMeeting"
+                  />
+                </Space>
+              </a>
+            </Dropdown>
+          </div>
         </div>
       </div>
     </div>

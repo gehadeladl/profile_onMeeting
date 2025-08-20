@@ -18,12 +18,11 @@ body {
   text-align: right;
   font-family: "Noto Kufi Arabic" !important;
 }
-.ant-input , 
-.ant-drawer-body , 
+.ant-input,
+.ant-drawer-body,
 .ant-dropdown {
   font-family: "Noto Kufi Arabic" !important;
 }
-
 
 /* update image  */
 
@@ -53,33 +52,32 @@ body {
 
 /* menu navbar  */
 
-.ant-drawer-body{
+.ant-drawer-body {
   padding: 10px 24px !important;
 }
-.ant-drawer-body button{
-    border-bottom: 1px solid #eee;
-    padding: 10px ;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    cursor: pointer;
-    border-radius:3px ;
-    -webkit-border-radius:3px ;
-    -moz-border-radius:3px ;
-    -ms-border-radius:3px ;
-    -o-border-radius:3px ;
-    margin-bottom: 1px;
+.ant-drawer-body button {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  margin-bottom: 1px;
 }
-.ant-drawer-body button:first-of-type , 
-.ant-drawer-body button:hover{
-  background-color: #f0f0f0;
+.ant-drawer-body button:first-of-type,
+.ant-drawer-body button:hover {
+  background-color: #eaf5ff;
 }
-.ant-drawer-body button:first-of-type span ,
-.ant-drawer-body button:first-of-type svg{
+.ant-drawer-body button:first-of-type span,
+.ant-drawer-body button:first-of-type svg {
   color: var(--default-color3--);
 }
-
 
 /* menu user navbar  */
 
@@ -91,7 +89,7 @@ body {
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
-  box-shadow: 0 .1875rem .75rem 0 rgba(47, 43, 61, .14);
+  box-shadow: 0 0.1875rem 0.75rem 0 rgba(47, 43, 61, 0.14);
 }
 
 .wrapperImageUser ul .ant-dropdown-menu-item {
@@ -101,7 +99,7 @@ body {
 .wrapperImageUser ul,
 .wrapperImageUser ul .ant-dropdown-menu-item:first-of-type {
   padding: 0 !important;
-  background-color: #fff   !important;
+  background-color: #fff !important;
   cursor: auto;
 }
 
@@ -109,3 +107,8 @@ body {
   font-size: 13px;
 }
 
+/* serach navbar  */
+
+.ant-input-group-wrapper {
+  max-width: 340px !important;
+}

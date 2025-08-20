@@ -2,14 +2,14 @@ import React from "react";
 import {
   DashboardOutlined,
   HomeOutlined,
-  ProfileOutlined,
+  ProfileFilled,
 } from "@ant-design/icons";
 
 const Menu = () => {
   return (
     <>
       <button>
-        <ProfileOutlined /> <span> الشخصي </span>{" "}
+        <ProfileFilled /> <span> الشخصي </span>{" "}
       </button>
       <button>
         <HomeOutlined /> <span> الرئيسيه </span>{" "}

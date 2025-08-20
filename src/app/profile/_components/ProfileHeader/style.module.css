@@ -8,7 +8,8 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  border: 1px solid #eee;
+  box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+  height: 370px;
 }
 
 .coverSection {
@@ -18,6 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("./../../../../../public/images/coverUser.jpg");
 }
 
 .profileInfoSection {
@@ -28,39 +30,45 @@
 .profileAvatar {
   width: 110px;
   height: 110px;
-  border-radius: 7px;
+  border-radius: 50%;
   border: 3px solid #fff;
   position: absolute;
   top: -65px;
   right: 100px;
   transform: translateX(50%);
   overflow: hidden;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .teacherDetails {
   margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
-
+.teacherDetails > div:last-of-type {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 .teacherName {
-  font-size: 20px;
+  font-size: 16px;
   color: #293c7a;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
 .teacherTitle {
-  font-size: 14px;
+  font-size: 13px;
   color: #666;
   margin-bottom: 5px;
 }
 
 .teacherBio {
   color: #666;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.6;
   margin-bottom: 8px;
 }
@@ -68,9 +76,9 @@
 .but {
   background: var(--default-color3--);
   color: white;
-  padding: 7px 22px;
+  padding: 5px 15px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 12px;
   cursor: pointer;
   transition: 0.4s;
   -webkit-transition: 0.4s;
@@ -88,7 +96,20 @@
 .but:hover {
   opacity: 0.8;
 }
-
+.but:last-of-type {
+  background-color: transparent;
+  border: 1px solid var(--default-color3--);
+  color: var(--default-color3--);
+}
 .coverSection img {
   width: 100% !important;
+}
+
+@media (max-width: 600px) {
+  .teacherDetails {
+    display: block;
+  }
+  .profileHeader {
+    height: 385px;
+  }
 }

@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 1px 1px 8px -6px #5232ca;
+  /* box-shadow: 1px 1px 8px -6px #5232ca; */
   margin-bottom: 6px;
 }
 
@@ -15,13 +15,13 @@
   gap: 2px;
 }
 
-.wrapperNavbar > div.wrapperLogo{
+.wrapperNavbar > div.wrapperLogo {
   justify-content: flex-start;
-    gap: 20px;
+  gap: 20px;
 }
 .wrapperNavbar > div.infoUser {
   justify-content: flex-end;
-    gap: 8px;
+  gap: 8px;
 }
 
 .infoUser img {
@@ -37,17 +37,37 @@
   cursor: pointer;
 }
 .wrapperLogo input {
-  width: 200px;
+  min-width: 200px !important;
+  max-width: 300px !important;
   height: 35px;
+  border-radius: 18px;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  -ms-border-radius: 18px;
+  -o-border-radius: 18px;
+}
+
+.wrapperLogo button {
+  height: 35px !important;
+  border-radius: 20px 0 0 20px;
+  -webkit-border-radius: 20px 0 0 20px;
+  -moz-border-radius: 20px 0 0 20px;
+  -ms-border-radius: 20px 0 0 20px;
+  -o-border-radius: 20px 0 0 20px;
+  width: 40px !important;
+}
+
+.wrapperLogo input::placeholder {
+  font-size: 12px;
 }
 .menuNavbar button span {
   display: block;
   margin-top: 5px;
-  font-size: 13px;
+  font-size: 12px;
   color: #666;
 }
 .menuNavbar svg {
-  font-size: 16px;
+  font-size: 15px;
   color: #666;
   transition: 0.4s;
   -webkit-transition: 0.4s;
@@ -62,107 +82,105 @@
   -moz-transition: 0.4s;
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
-     padding: 5px 15px;
-    border-radius: 5px;
+  padding: 5px 15px;
+  border-radius: 5px;
 }
 
 .menuNavbar button:hover {
-    background-color: #f0f0f0;
+  background-color: #eaf5ff;
 }
 
-
-.menuNavbar button:hover svg , 
+.menuNavbar button:hover svg,
 .menuNavbar button:hover span {
   color: var(--default-color3--);
 }
 
-
 .menuNavbar button:first-of-type {
-background-color: #f0f0f0;
+  background-color: #eaf5ff;
 }
 
-.menuNavbar button:first-of-type svg , 
-.menuNavbar button:first-of-type span{
+.menuNavbar button:first-of-type svg,
+.menuNavbar button:first-of-type span {
   color: var(--default-color3--);
 }
-.infoUser button{
-  background-color: transparent ;
-  padding: 0 ;
+.infoUser button {
+  background-color: transparent;
+  padding: 0;
   display: none;
   cursor: pointer;
 }
-.infoUser button svg{
+.infoUser button svg {
   font-size: 23px;
-  color: #666 ;
+  color: #666;
 }
 
 .wrapperImageUser,
 .wrapperImageUser a {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .wrapperImageUser img {
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
 }
 .wrapperImageUserOption img {
-    cursor: auto;
+  cursor: auto;
 }
 
 .wrapperImageUserOption {
-    height: 190px;
-    width: 100%;
-    text-align: center;
+  height: 190px;
+  width: 100%;
+  text-align: center;
 }
 .wrapperImageUserOption h4 {
-    margin: 3px 0 0 0;
-    color: var(--defaulte-color--);
-    font-size: 14px;
+  margin: 3px 0 0 0;
+  color: var(--defaulte-color--);
+  font-size: 14px;
 }
 
 .wrapperImageUserOption p {
-    font-size: 13px;
-    color: #1890ff;
-    background: rgba(24, 144, 255, .1);
-    width: -moz-fit-content;
-    width: fit-content;
-    margin: 7px auto;
-    padding: 0 5px;
-    line-height: 20px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+  font-size: 13px;
+  color: #1890ff;
+  background: rgba(24, 144, 255, 0.1);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 7px auto;
+  padding: 0 5px;
+  line-height: 20px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 .bg {
-    position: relative;
-    width: 100%;
-    height: 80px;
-    background: var(--default-color3--);
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background: var(--default-color3--);
 }
 .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -35%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
 }
 
 .content img {
-    border: 2px solid #fff;
-    margin: auto;
+  border: 2px solid #fff;
+  margin: auto;
 }
 
-@media(max-width:820px){
-  .wrapperNavbar .menuNavbar{
+@media (max-width: 870px) {
+  .wrapperNavbar .menuNavbar {
     display: none;
   }
-  .infoUser button{
+  .infoUser button {
     display: inline-block;
   }
 }

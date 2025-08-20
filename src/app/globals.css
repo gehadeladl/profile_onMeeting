@@ -18,9 +18,15 @@ body {
   text-align: right;
   font-family: "Noto Kufi Arabic" !important;
 }
-.ant-input {
+.ant-input , 
+.ant-drawer-body , 
+.ant-dropdown {
   font-family: "Noto Kufi Arabic" !important;
 }
+
+
+/* update image  */
+
 .ant-upload.ant-upload-select {
   width: 35px !important;
   height: 35px !important;
@@ -44,3 +50,62 @@ body {
   top: 30px;
   left: 30px;
 }
+
+/* menu navbar  */
+
+.ant-drawer-body{
+  padding: 10px 24px !important;
+}
+.ant-drawer-body button{
+    border-bottom: 1px solid #eee;
+    padding: 10px ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    cursor: pointer;
+    border-radius:3px ;
+    -webkit-border-radius:3px ;
+    -moz-border-radius:3px ;
+    -ms-border-radius:3px ;
+    -o-border-radius:3px ;
+    margin-bottom: 1px;
+}
+.ant-drawer-body button:first-of-type , 
+.ant-drawer-body button:hover{
+  background-color: #f0f0f0;
+}
+.ant-drawer-body button:first-of-type span ,
+.ant-drawer-body button:first-of-type svg{
+  color: var(--default-color3--);
+}
+
+
+/* menu user navbar  */
+
+.wrapperImageUser {
+  min-width: 250px !important;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: 0 .1875rem .75rem 0 rgba(47, 43, 61, .14);
+}
+
+.wrapperImageUser ul .ant-dropdown-menu-item {
+  padding: 8px 12px !important;
+}
+
+.wrapperImageUser ul,
+.wrapperImageUser ul .ant-dropdown-menu-item:first-of-type {
+  padding: 0 !important;
+  background-color: #fff   !important;
+  cursor: auto;
+}
+
+.wrapperImageUser ul li a {
+  font-size: 13px;
+}
+

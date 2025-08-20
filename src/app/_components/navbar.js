@@ -1,14 +1,69 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./style.module.css";
 import Image from "next/image";
-import { DashboardFilled, HomeFilled } from "@ant-design/icons";
-import { Input } from "antd";
+import { BarsOutlined } from "@ant-design/icons";
+import { Drawer, Dropdown, Input, Space } from "antd";
+import Menu from "./menu/menu";
 
 const Navbar = () => {
+  // state
+
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
+
+  // items menu user
+
+  const items = [
+    {
+      label: (
+        <div
+          className={` ${styles.wrapperImageUser} ${styles.wrapperImageUserOption} `}
+        >
+          <div className={styles.bg}> </div>
+          <div className={styles.content}>
+            <Image
+              src="/images/avatar.png"
+              width={50}
+              height={50}
+              alt="user onMeeting"
+            />
+            <h4> gehadeladl19@gmail.com </h4>
+            <p> owner </p>
+          </div>
+        </div>
+      ),
+      key: "0",
+    },
+    {
+      type: "divider",
+    },
+    {
+      label: <a href="https://www.aliyun.com"> تسجيل خروج </a>,
+      key: "1",
+    },
+  ];
+
+  // useEffect
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 820) {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <div className={styles.wrapperNavbar}>
-      <div>
+      <div className={styles.wrapperLogo}>
         <Image
           src="/images/logoiconhome.png"
           width={50}
@@ -17,21 +72,44 @@ const Navbar = () => {
         />
         <Input placeholder="بحث عن مستخدم" />
       </div>
-      <div>
-        <button>
-          <HomeFilled /> <span> الرئيسيه </span>{" "}
-        </button>
-        <button>
-          <DashboardFilled /> <span> التحكم </span>{" "}
-        </button>
+      <div className={styles.menuNavbar}>
+        <Menu />
       </div>
-      <div>
-        <Image
-          src="/images/avatar.png"
-          width={40}
-          height={40}
-          alt="user onMeeting"
-        />
+
+      <div className={styles.infoUser}>
+        <button onClick={showDrawer}>
+          <BarsOutlined />
+        </button>
+        <div className={styles.wrapperMenuRes}>
+          <Drawer
+            title=""
+            closable={{ "aria-label": "Close Button" }}
+            onClose={onClose}
+            open={open}
+          >
+            <Menu />
+          </Drawer>
+        </div>
+        <div className={`${styles.wrapperImageUser} `}>
+          <Dropdown
+            overlayClassName="wrapperImageUser"
+            menu={{
+              items,
+            }}
+            trigger={["click"]}
+          >
+            <a onClick={(e) => e.preventDefault()}>
+              <Space>
+                <Image
+                  src="/images/avatar.png"
+                  width={40}
+                  height={40}
+                  alt="user onMeeting"
+                />
+              </Space>
+            </a>
+          </Dropdown>
+        </div>
       </div>
     </div>
   );

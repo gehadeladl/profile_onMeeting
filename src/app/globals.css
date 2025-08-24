@@ -18,6 +18,11 @@ body {
   text-align: right;
   font-family: "Noto Kufi Arabic" !important;
 }
+
+body.en {
+  direction: ltr;
+  text-align: left;
+}
 .ant-input,
 .ant-drawer-body,
 .ant-dropdown {
@@ -93,7 +98,7 @@ body {
 }
 
 .wrapperImageUser ul .ant-dropdown-menu-item {
-  padding: 8px 12px !important;
+  padding: 0 !important;
 }
 
 .wrapperImageUser ul,
@@ -103,10 +108,19 @@ body {
   cursor: auto;
 }
 
-.wrapperImageUser ul li a {
+.wrapperImageUser ul li a,
+.wrapperImageUser ul li button {
   font-size: 13px;
+  padding: 8px 12px !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
 }
-
+.wrapperImageUser ul li button {
+  margin: 0;
+}
 /* serach navbar  */
 
 .ant-input-group-wrapper {

@@ -4,10 +4,8 @@ import styles from "./style.module.css";
 import Image from "next/image";
 import { IoTimeOutline } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
-import { useTranslation } from "react-i18next";
 
 const BookingCalendar = ({ teacher }) => {
-  const [t] = useTranslation();
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [currentMonth, setCurrentMonth] = useState(new Date());
@@ -16,18 +14,18 @@ const BookingCalendar = ({ teacher }) => {
   const availableTimes = ["09:00", "10:00", "11:00", "14:00", "15:00", "16:00"];
 
   const monthNames = [
-    t("months.jan"),
-    t("months.feb"),
-    t("months.mar"),
-    t("months.apr"),
-    t("months.may"),
-    t("months.jun"),
-    t("months.jul"),
-    t("months.aug"),
-    t("months.sep"),
-    t("months.oct"),
-    t("months.nov"),
-    t("months.dec"),
+    "يناير",
+    "فبراير",
+    "مارس",
+    "أبريل",
+    "مايو",
+    "يونيو",
+    "يوليو",
+    "أغسطس",
+    "سبتمبر",
+    "أكتوبر",
+    "نوفمبر",
+    "ديسمبر",
   ];
 
   const getDaysInMonth = (date) => {
@@ -104,10 +102,7 @@ const BookingCalendar = ({ teacher }) => {
   return (
     <div className={styles.contentCard}>
       <div className={styles.sectionHeader}>
-        <h3 className={styles.sectionTitle}>
-          {" "}
-          {t("profile.header.bookAppointment")}{" "}
-        </h3>
+        <h3 className={styles.sectionTitle}>حجز موعد</h3>
       </div>
 
       <div className={styles.wrapperCalendar}>
@@ -134,13 +129,13 @@ const BookingCalendar = ({ teacher }) => {
 
           <div className={styles.calendarGrid}>
             {[
-              t("days.sun"),
-              t("days.mon"),
-              t("days.tue"),
-              t("days.wed"),
-              t("days.thu"),
-              t("days.fri"),
-              t("days.sat"),
+              "الأحد",
+              "الإثنين",
+              "الثلاثاء",
+              "الأربعاء",
+              "الخميس",
+              "الجمعة",
+              "السبت",
             ].map((day) => (
               <div key={day} className={styles.dayHeader}>
                 {day}
@@ -208,13 +203,13 @@ const BookingCalendar = ({ teacher }) => {
             onClick={handleBooking}
           >
             {selectedDate && selectedTime
-              ? `${t("but.bookAppointment")} - ${selectedTime}`
+              ? `احجز الموعد - ${selectedTime}`
               : selectedDate
-              ? t("but.chooseSuitableTime")
-              : t("but.chooseAnAppointmentFirst")}
+              ? "اختر الوقت المناسب"
+              : "اختر موعد أولاً"}
           </button>
           <div className={styles.contactInfo}>
-            <span> {t("but.orContactMeDirectly")} :</span>
+            <span>أو تواصل معي مباشرة:</span>
             <br />
 
             <p>

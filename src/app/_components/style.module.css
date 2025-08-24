@@ -56,7 +56,13 @@
   -o-border-radius: 20px 0 0 20px;
   width: 40px !important;
 }
-
+.wrapperLogoEn button {
+  border-radius: 0 20px 20px 0;
+  -webkit-border-radius: 0 20px 20px 0;
+  -moz-border-radius: 0 20px 20px 0;
+  -ms-border-radius: 0 20px 20px 0;
+  -o-border-radius: 0 20px 20px 0;
+}
 .wrapperLogo input::placeholder {
   font-size: 12px;
 }

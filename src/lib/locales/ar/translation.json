@@ -1,0 +1,58 @@
+{
+  "navbar": {
+    "search": "بحث عن مستخدم",
+    "profile": "الشخصي",
+    "home": "الرئيسيه",
+    "dashboard": "التحكم",
+    "logout": "تسجيل الخروج",
+    "langAr": "عربي",
+    "langEn": "انجليزي"
+  },
+  "profile": {
+    "header": {
+      "bookAppointment": "حجز موعد",
+      "follow": "متابعه",
+      "contact": {
+        "title": "تواصل",
+        "phone": "هاتف",
+        "email": "إيميل",
+        "facebook": "فيس بوك",
+        "linkedin": "لينكدإن",
+        "whatsapp": "واتساب",
+        "instagram": "إنستجرام"
+      }
+    }
+  },
+  "about": {
+    "title": "نبذه عني"
+  },
+  "months": {
+    "jan": "يناير",
+    "feb": "فبراير",
+    "mar": "مارس",
+    "apr": "أبريل",
+    "may": "مايو",
+    "jun": "يونيو",
+    "jul": "يوليو",
+    "aug": "أغسطس",
+    "sep": "سبتمبر",
+    "oct": "أكتوبر",
+    "nov": "نوفمبر",
+    "dec": "ديسمبر"
+  },
+  "days": {
+    "sun": "الأحد",
+    "mon": "الإثنين",
+    "tue": "الثلاثاء",
+    "wed": "الأربعاء",
+    "thu": "الخميس",
+    "fri": "الجمعة",
+    "sat": "السبت"
+  },
+  "but": {
+    "bookAppointment": "احجز الموعد",
+    "chooseSuitableTime": "اختر الوقت المناسب",
+    "chooseAnAppointmentFirst": "اختر موعد أولاً",
+    "orContactMeDirectly": "أو تواصل معي مباشرة"
+  }
+}

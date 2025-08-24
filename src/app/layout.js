@@ -1,6 +1,7 @@
 import Navbar from "./_components/navbar";
 import "./globals.css";
 import { Noto_Kufi_Arabic } from "next/font/google";
+import I18nProvider from "./I18nProvider";
 
 const notoKufiArabic = Noto_Kufi_Arabic({
   subsets: ["arabic"],
@@ -13,13 +14,17 @@ export const metadata = {
   description: " onMeeting app profile ",
 };
 
-export default function RootLayout({ children }) {
+const RootLayout = ({ children }) => {
   return (
-    <html lang="ar">
+    <html>
       <body className={`${notoKufiArabic.variable} `}>
-        <Navbar />
-        {children}
+        <I18nProvider>
+          <Navbar />
+          {children}
+        </I18nProvider>
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

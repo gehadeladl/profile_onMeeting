@@ -4,18 +4,21 @@ import {
   HomeOutlined,
   ProfileFilled,
 } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 
 const Menu = () => {
+  // state
+  const { t, i18n } = useTranslation();
   return (
     <>
       <button>
-        <ProfileFilled /> <span> الشخصي </span>{" "}
+        <ProfileFilled /> <span> {t("navbar.profile")} </span>{" "}
       </button>
       <button>
-        <HomeOutlined /> <span> الرئيسيه </span>{" "}
+        <HomeOutlined /> <span> {t("navbar.home")} </span>{" "}
       </button>
       <button>
-        <DashboardOutlined /> <span> التحكم </span>{" "}
+        <DashboardOutlined /> <span> {t("navbar.dashboard")} </span>{" "}
       </button>
     </>
   );

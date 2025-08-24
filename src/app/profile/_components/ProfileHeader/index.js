@@ -7,9 +7,11 @@ import { GoPlus } from "react-icons/go";
 
 import { CameraFilled } from "@ant-design/icons";
 import { Upload } from "antd";
+import { useTranslation } from "react-i18next";
 
 const ProfileHeader = ({ teacher }) => {
   const router = useRouter();
+  const [t, i18n] = useTranslation();
 
   const [fileList, setFileList] = useState([]);
   const handleChange = ({ fileList: newFileList }) => console.log(newFileList);
@@ -59,11 +61,11 @@ const ProfileHeader = ({ teacher }) => {
               className={styles.but}
               onClick={() => router.push("/booking_calendar")}
             >
-              <span>حجز موعد</span>
+              <span> {t("profile.header.bookAppointment")} </span>
             </button>
             <button className={styles.but}>
               <GoPlus />
-              <span> متابعه </span>
+              <span> {t("profile.header.follow")} </span>
             </button>
           </div>
         </div>

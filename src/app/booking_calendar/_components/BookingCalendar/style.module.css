@@ -1,9 +1,7 @@
-
 /* Content Cards */
 .contentCard {
   background: white;
   border-radius: 20px;
-  padding: 30px;
   box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
   margin-bottom: 20px;
 }
@@ -12,41 +10,30 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #f0f2f5;
-}
-
-.sectionIcon {
-  width: 35px;
-  height: 35px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #293c7a, #1890ff);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.3rem;
+  padding: 20px;
+  border-bottom: 1px solid #f0f2f5;
 }
 
 .sectionTitle {
-  font-size: 25px;
+  font-size: 16px;
   color: #293c7a;
   font-weight: 600;
 }
 
 /* Calendar Styles */
 
-.wrapperCalendar{
+.wrapperCalendar {
   display: flex;
   gap: 20px;
+  padding: 20px;
 }
 .calendarContainer {
-  background: #f8f9fc;
+  box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
   border-radius: 15px;
   padding: 25px;
   margin-bottom: 25px;
   width: 50%;
+  height: 450px;
 }
 
 .calendarHeader {
@@ -55,16 +42,18 @@
   align-items: center;
   margin-bottom: 25px;
 }
-
+.calendarHeader div:first-of-type {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 .monthYear {
-  font-weight: bold;
   color: #293c7a;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .navBtn {
-  background: #293c7a;
-  color: white;
+  color: #666;
   border: none;
   width: 30px;
   height: 30px;
@@ -78,12 +67,7 @@
 }
 
 .navBtn:hover {
-  background: #f67a39;
-  transform: scale(1.02);
-  -webkit-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  -o-transform: scale(1.02);
+  color: var(--default-color3--);
 }
 
 .calendarGrid {
@@ -98,13 +82,13 @@
   font-weight: normal;
   color: #293c7a;
   padding: 10px;
-  font-size: 14px;
-  width: 46px;
+  font-size: 12px;
+  width: 50px;
 }
 
 .calendarDay {
   aspect-ratio: 1;
-  border-radius: 10px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,6 +97,13 @@
   transition: all 0.3s ease;
   position: relative;
   background: white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
 }
 
 .calendarDay.otherMonth {
@@ -126,23 +117,32 @@
 }
 
 .calendarDay.available {
-  background: #293c7a;
-  color: white;
+  color: var(--default-color3--);
   cursor: pointer;
 }
 
 .calendarDay.available:hover {
-  background: #f67a39;
-  transform: scale(1.1);
+  background: var(--default-color3--);
+  transform: scale(1.01);
+  color: #fff;
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
 }
 
 .calendarDay.selected {
-  background: #f67a39 !important;
-  transform: scale(1.1);
+  color: #fff !important;
+  background-color: var(--default-color3--);
+  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -o-transform: scale(1.01);
 }
 
 .calendarDay.hasSlots::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 3px;
   right: 50%;
@@ -159,17 +159,26 @@
 
 /* Time Slots */
 .timeSlots {
-  margin-top: 20px;
+  box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+  padding: 20px 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 450px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
 
 .selectedDate {
-  font-weight: 600;
   color: #293c7a;
   margin-bottom: 15px;
   padding: 10px;
   background: rgba(41, 60, 122, 0.1);
   border-radius: 8px;
   text-align: center;
+  font-size: 14px;
 }
 
 .slotsGrid {
@@ -182,11 +191,11 @@
   background: white;
   border: 2px solid #e0e6ed;
   border-radius: 10px;
-  padding: 12px;
+  padding: 10px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-size: 12px;
 }
 
 .timeSlot:hover {
@@ -202,37 +211,65 @@
 
 /* Booking Section */
 .bookingInfo {
-  background: linear-gradient(135deg, #293c7a, #1890ff);
-  color: white;
-  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+  border-radius: 20px;
   padding: 25px;
-  text-align: center;
   width: 50%;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  height: 450px;
 }
 
-.priceDisplay {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.priceLabel {
-  opacity: 0.9;
+.bookingInfo img {
   margin-bottom: 20px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #eee;
+  padding: 2px;
+}
+
+.descLabel {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.titleLabel {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--default-color--);
+  margin-bottom: 12px;
+}
+.timeLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 40px;
 }
 
 .bookBtn {
-  width: 100%;
+  width: 80%;
   background: #f67a39;
   color: white;
   border: none;
   border-radius: 12px;
-  padding: 15px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  padding: 10px;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-bottom: 15px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .bookBtn:hover:not(:disabled) {
@@ -248,23 +285,25 @@
 }
 
 .contactInfo {
-  font-size: 0.9rem;
-  opacity: 0.9;
+  text-align: center;
+  font-size: 12px;
 }
 
+.contactInfo p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 5px;
+}
 /* Responsive Design */
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   .calendarGrid {
     gap: 4px;
   }
-  
+
   .slotsGrid {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 8px;
   }
-
-  .contentCard {
-    padding: 20px;
-  }
-
 }

@@ -1,0 +1,58 @@
+{
+  "navbar": {
+    "search": "Search for a user",
+    "profile": "Profile",
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "logout": "Logout",
+    "langAr": "Arabic",
+    "langEn": "English"
+  },
+  "profile": {
+    "header": {
+      "bookAppointment": "Book appointment ",
+      "follow": "Follow",
+      "contact": {
+        "phone": "Phone",
+        "title": "Contact",
+        "email": "Email",
+        "facebook": "Facebook",
+        "linkedIn": "LinkedIn",
+        "whatsApp": "WhatsApp",
+        "instagram": "Instagram"
+      }
+    }
+  },
+  "about": {
+    "title": "About"
+  },
+  "months": {
+    "jan": "january",
+    "feb": "february",
+    "mar": "march",
+    "apr": "april",
+    "may": "may",
+    "jun": "june",
+    "jul": "july",
+    "aug": "august",
+    "sep": "september",
+    "oct": "october",
+    "nov": "november",
+    "dec": "december"
+  },
+  "days": {
+    "sun": "sun",
+    "mon": "mon",
+    "tue": "tue",
+    "wed": "wed",
+    "thu": "thu",
+    "fri": "fri",
+    "sat": "sat"
+  },
+  "but": {
+    "bookAppointment": "Book appointment",
+    "chooseSuitableTime": "Choose suitable time",
+    "chooseAnAppointmentFirst": "Choose an appointment first",
+    "orContactMeDirectly": "or contact me directly"
+  }
+}

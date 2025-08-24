@@ -1,13 +1,15 @@
 "use client";
 import React from "react";
 import styles from "./style.module.css";
+import { useTranslation } from "react-i18next";
 
 const ProfileAbout = ({ teacher }) => {
+  const [t, i18n] = useTranslation();
+
   return (
     <div className={`${styles.contentCard} mt-[40px] lg:mt-0`}>
       <div className={styles.sectionHeader}>
-        {/* <div className={styles.sectionIcon}>📚</div> */}
-        <h3 className={styles.sectionTitle}>نبذة عني</h3>
+        <h3 className={styles.sectionTitle}> {t("about.title")} </h3>
       </div>
 
       <div className={styles.aboutContent}>

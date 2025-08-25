@@ -111,15 +111,18 @@
   cursor: default;
 }
 
-.calendarDay.today {
-  background: #1890ff;
-  color: white;
-}
 
 .calendarDay.available {
   color: var(--default-color3--);
   cursor: pointer;
 }
+
+.calendarDay.today {
+  background: transparent;
+  color: #1890ff;
+  border: 1px solid #1890ff;
+}
+
 
 .calendarDay.available:hover {
   background: var(--default-color3--);
@@ -151,12 +154,18 @@
   height: 6px;
   background: #f67a39;
   border-radius: 50%;
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
 }
 
 .calendarDay.available.hasSlots::after {
   background: white;
 }
-
+.calendarDay.today.hasSlots::after{
+  background-color: #1890ff;
+}
 /* Time Slots */
 .timeSlots {
   box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
@@ -297,6 +306,25 @@
   margin-top: 5px;
 }
 /* Responsive Design */
+
+@media(max-width:900px){
+  .wrapperCalendar{
+    flex-wrap: wrap;
+  }
+  .calendarContainer{
+    width: 100%;
+  }
+  .calendarContainer.calendarContainerNoSelectedDate{
+    width: 70%;
+  }
+  .wrapperCalendar > div:nth-of-type(2){
+    width: calc(30% - 20px);
+  }
+  .bookingInfo{
+    width: 100% ;
+  }
+}
+
 @media (max-width: 768px) {
   .calendarGrid {
     gap: 4px;
@@ -305,5 +333,23 @@
   .slotsGrid {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 8px;
+  }
+}
+
+@media (max-width: 700px) {
+  .calendarContainer.calendarContainerNoSelectedDate{
+    width: 100%;
+  }
+  .wrapperCalendar > div:nth-of-type(2){
+    width:  100%;
+  }
+}
+
+@media(max-width:500px){
+  .slotsGrid{
+    display: block;
+  }
+  .timeSlot{
+    margin-bottom: 15px;
   }
 }

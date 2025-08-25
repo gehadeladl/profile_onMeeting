@@ -6,12 +6,12 @@ import { IoTimeOutline } from "react-icons/io5";
 import { MdLocalPhone } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
-const BookingCalendar = ({ teacher }) => {
+const BookingCalendar = ({ teacher, setBookingConfirmation }) => {
   const [t] = useTranslation();
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [currentMonth, setCurrentMonth] = useState(new Date());
-
+  console.log(selectedDate);
   const availableDates = [3, 5, 9, 12, 15, 18, 22, 25];
   const availableTimes = ["09:00", "10:00", "11:00", "14:00", "15:00", "16:00"];
 
@@ -49,12 +49,17 @@ const BookingCalendar = ({ teacher }) => {
       });
     }
 
+    const today = new Date();
+
     for (let day = 1; day <= daysInMonth; day++) {
       days.push({
         day,
         isCurrentMonth: true,
         isAvailable: availableDates.includes(day),
-        isToday: day === 10,
+        isToday:
+          day === today.getDate() &&
+          month === today.getMonth() &&
+          year === today.getFullYear(),
       });
     }
 
@@ -83,11 +88,12 @@ const BookingCalendar = ({ teacher }) => {
 
   const handleBooking = () => {
     if (selectedDate && selectedTime) {
-      alert(
-        `تم حجز الموعد بنجاح!\nالتاريخ: ${selectedDate} ${
-          monthNames[currentMonth.getMonth()]
-        }\nالوقت: ${selectedTime}\nسيتم التواصل معك قريباً للتأكيد.`
-      );
+      // alert(
+      //   `تم حجز الموعد بنجاح!\nالتاريخ: ${selectedDate} ${
+      //     monthNames[currentMonth.getMonth()]
+      //   }\nالوقت: ${selectedTime}\nسيتم التواصل معك قريباً للتأكيد.`
+      // );
+      setBookingConfirmation(true);
     }
   };
 
@@ -105,13 +111,74 @@ const BookingCalendar = ({ teacher }) => {
     <div className={styles.contentCard}>
       <div className={styles.sectionHeader}>
         <h3 className={styles.sectionTitle}>
-          {" "}
-          {t("profile.header.bookAppointment")}{" "}
+          {t("bookingCalendar.header.title")}
         </h3>
       </div>
 
       <div className={styles.wrapperCalendar}>
-        <div className={styles.calendarContainer}>
+        <div className={styles.bookingInfo}>
+          <Image
+            src="/images/user.jpg"
+            width={60}
+            height={60}
+            alt="logo onMeeting"
+          />
+          <p className={styles.descLabel}> جميع المناهج الدراسيه </p>
+          <h5 className={styles.titleLabel}> مؤسسه العدل </h5>
+          <h6 className={styles.timeLabel}>
+            {" "}
+            <IoTimeOutline />
+            30 دقيقه{" "}
+          </h6>
+          <button
+            className={styles.bookBtn}
+            disabled={!selectedDate || !selectedTime}
+            onClick={handleBooking}
+          >
+            {selectedDate && selectedTime
+              ? `${t("but.bookAppointment")} - ${selectedTime}`
+              : selectedDate
+              ? t("but.chooseSuitableTime")
+              : t("but.chooseAnAppointmentFirst")}
+          </button>
+          <div className={styles.contactInfo}>
+            <span> {t("but.orContactMeDirectly")} :</span>
+            <br />
+
+            <p>
+              {" "}
+              <MdLocalPhone /> <span> {teacher.phone}</span>{" "}
+            </p>
+          </div>
+        </div>
+
+        <div>
+          {selectedDate && (
+            <div className={styles.timeSlots}>
+              <div className={styles.selectedDate}>
+                {selectedDate} {monthNames[currentMonth.getMonth()]}
+              </div>
+              <div className={styles.slotsGrid}>
+                {availableTimes.map((time) => (
+                  <div
+                    key={time}
+                    className={`${styles.timeSlot} ${
+                      selectedTime === time ? styles.selected : ""
+                    }`}
+                    onClick={() => handleTimeSelect(time)}
+                  >
+                    {time}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+        <div
+          className={`${styles.calendarContainer} ${
+            selectedDate ? styles.calendarContainerNoSelectedDate : ""
+          }`}
+        >
           <div className={styles.calendarHeader}>
             <div>
               <button
@@ -164,63 +231,6 @@ const BookingCalendar = ({ teacher }) => {
                 {day.day}
               </div>
             ))}
-          </div>
-        </div>
-        <div>
-          {selectedDate && (
-            <div className={styles.timeSlots}>
-              <div className={styles.selectedDate}>
-                {selectedDate} {monthNames[currentMonth.getMonth()]}
-              </div>
-              <div className={styles.slotsGrid}>
-                {availableTimes.map((time) => (
-                  <div
-                    key={time}
-                    className={`${styles.timeSlot} ${
-                      selectedTime === time ? styles.selected : ""
-                    }`}
-                    onClick={() => handleTimeSelect(time)}
-                  >
-                    {time}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-        <div className={styles.bookingInfo}>
-          <Image
-            src="/images/user.jpg"
-            width={60}
-            height={60}
-            alt="logo onMeeting"
-          />
-          <p className={styles.descLabel}> جميع المناهج الدراسيه </p>
-          <h5 className={styles.titleLabel}> مؤسسه العدل </h5>
-          <h6 className={styles.timeLabel}>
-            {" "}
-            <IoTimeOutline />
-            30 دقيقه{" "}
-          </h6>
-          <button
-            className={styles.bookBtn}
-            disabled={!selectedDate || !selectedTime}
-            onClick={handleBooking}
-          >
-            {selectedDate && selectedTime
-              ? `${t("but.bookAppointment")} - ${selectedTime}`
-              : selectedDate
-              ? t("but.chooseSuitableTime")
-              : t("but.chooseAnAppointmentFirst")}
-          </button>
-          <div className={styles.contactInfo}>
-            <span> {t("but.orContactMeDirectly")} :</span>
-            <br />
-
-            <p>
-              {" "}
-              <MdLocalPhone /> <span> {teacher.phone}</span>{" "}
-            </p>
           </div>
         </div>
       </div>

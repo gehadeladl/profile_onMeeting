@@ -6,11 +6,12 @@
     "dashboard": "Dashboard",
     "logout": "Logout",
     "langAr": "Arabic",
-    "langEn": "English"
+    "langEn": "English",
+    "bookAppointment": "Book"
   },
   "profile": {
     "header": {
-      "bookAppointment": "Book appointment ",
+      "bookAppointment": "Book appointment",
       "follow": "Follow",
       "contact": {
         "phone": "Phone",
@@ -21,6 +22,14 @@
         "whatsApp": "WhatsApp",
         "instagram": "Instagram"
       }
+    }
+  },
+  "bookingCalendar" : {
+    "header" : {
+      "title" : "Book appointment "
+    },
+    "bookingConfirmation" : {
+      "title" : "Booking Confirmation"
     }
   },
   "about": {
@@ -53,6 +62,25 @@
     "bookAppointment": "Book appointment",
     "chooseSuitableTime": "Choose suitable time",
     "chooseAnAppointmentFirst": "Choose an appointment first",
-    "orContactMeDirectly": "or contact me directly"
+    "orContactMeDirectly": "or contact me directly",
+    "confirm" : "confirm"
+  },
+  "input": {
+  "name": {
+    "title": "Name",
+    "placeholder": "Enter your name",
+    "confirm": "Please enter your name"
+  },
+  "email": {
+    "title": "Email",
+    "placeholder": "Enter your email",
+    "confirm1": "Please enter your email",
+    "confirm2": "Please enter a valid email"
+  },
+  "ReasonForMeeting": {
+    "title": "Reason for Booking",
+    "placeholder": "Write the reason for booking here...",
+    "confirm": "Please enter the reason for booking"
   }
+}
 }

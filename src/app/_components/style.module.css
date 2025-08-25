@@ -101,12 +101,12 @@
   color: var(--default-color3--);
 }
 
-.menuNavbar button:first-of-type {
+.menuNavbar button.active {
   background-color: #eaf5ff;
 }
 
-.menuNavbar button:first-of-type svg,
-.menuNavbar button:first-of-type span {
+.menuNavbar button.active svg,
+.menuNavbar button.active span {
   color: var(--default-color3--);
 }
 .infoUser button {

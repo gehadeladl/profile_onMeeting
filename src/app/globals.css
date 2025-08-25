@@ -25,7 +25,9 @@ body.en {
 }
 .ant-input,
 .ant-drawer-body,
-.ant-dropdown {
+.ant-dropdown  ,
+.ant-btn , 
+.ant-form-item-label{
   font-family: "Noto Kufi Arabic" !important;
 }
 

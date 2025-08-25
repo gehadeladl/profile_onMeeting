@@ -1,0 +1,95 @@
+.contentCard {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+  margin-bottom: 20px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.sectionTitle {
+  font-size: 16px;
+  color: #293c7a;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sectionTitle button{
+  cursor: pointer;
+}
+
+.sectionTitle button svg{
+  font-size: 18px;
+}
+.wrapperConfirm {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.wrapperConfirm > div{
+    box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 25px;
+  width: 50%;
+  height: 450px;
+}
+.wrapperConfirm input{
+    height: 37px;
+}
+.wrapperConfirm input::placeholder{
+    font-size: 12px;
+}
+
+.wrapperConfirm img{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.wrapperConfirm h5{
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--default-color--);
+  margin-bottom: 5px;
+}
+
+.wrapperConfirm p{
+    font-size: 14px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.wrapperConfirm h6{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+@media(max-width:700px){
+  .wrapperConfirm{
+  display: block;
+}
+
+.wrapperConfirm > div{
+  width: 100%;
+}
+}

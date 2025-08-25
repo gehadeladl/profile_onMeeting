@@ -1,7 +1,10 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import BookingCalendar from "./_components/BookingCalendar";
+import BookingConfirmation from "./_components/BookingConfirmation";
 
 const bookingCalendar = () => {
+  const [bookingConfirmation, setBookingConfirmation] = useState(false);
   const teacherData = {
     id: 12124,
     name: "أستاذ أحمد محمد",
@@ -40,7 +43,14 @@ const bookingCalendar = () => {
   };
   return (
     <div className="container mx-auto px-4 py-6 max-w-7xl">
-      <BookingCalendar teacher={teacherData} />
+      {bookingConfirmation ? (
+        <BookingConfirmation setBookingConfirmation={setBookingConfirmation} />
+      ) : (
+        <BookingCalendar
+          setBookingConfirmation={setBookingConfirmation}
+          teacher={teacherData}
+        />
+      )}
     </div>
   );
 };

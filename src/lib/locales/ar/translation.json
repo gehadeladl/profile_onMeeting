@@ -24,12 +24,12 @@
       }
     }
   },
-  "bookingCalendar" : {
-    "header" : {
-      "title" : "حجز موعد"
+  "bookingCalendar": {
+    "header": {
+      "title": "حجز موعد"
     },
-    "bookingConfirmation" : {
-      "title" : "تأكيد الحجز"
+    "bookingConfirmation": {
+      "title": "تأكيد الحجز"
     }
   },
   "about": {
@@ -63,24 +63,24 @@
     "chooseSuitableTime": "اختر الوقت المناسب",
     "chooseAnAppointmentFirst": "اختر موعد أولاً",
     "orContactMeDirectly": "أو تواصل معي مباشرة",
-    "confirm" : "تأكيد"
+    "confirm": "تأكيد"
   },
-  "input" : {
-    "name" : {
-      "title" : "الاسم" ,
-      "placeholder" : "أدخل أسمك" ,
-      "confirm" : "من فضلك أدخل الاسم"
+  "input": {
+    "name": {
+      "title": "الاسم",
+      "placeholder": "أدخل أسمك",
+      "confirm": "من فضلك أدخل الاسم"
     },
-    "email" : {
-      "title" : "البريد الالكتروني" ,
-      "placeholder" : "أدخل البريد الالكتروني" ,
-      "confirm1" : "من فضلك أدخل البريد الإلكتروني" ,
-      "confirm2" : "من فضلك أدخل بريد إلكتروني صحيح"
+    "email": {
+      "title": "البريد الالكتروني",
+      "placeholder": "أدخل البريد الالكتروني",
+      "confirm1": "من فضلك أدخل البريد الإلكتروني",
+      "confirm2": "من فضلك أدخل بريد إلكتروني صحيح"
     },
-    "ReasonForMeeting" : {
-      "title" : "سبب الحجز" ,
-      "placeholder" :"اكتب سبب الحجز هنا..." ,
-      "confirm" : "من فضلك أدخل سبب الحجز"
+    "reasonForMeeting": {
+      "title": "سبب الحجز",
+      "placeholder": "اكتب سبب الحجز هنا...",
+      "confirm": "من فضلك أدخل سبب الحجز"
     }
   }
 }

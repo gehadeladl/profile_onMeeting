@@ -11,7 +11,7 @@ const { Search } = Input;
 
 const Navbar = () => {
   // state
-  const { t, i18n } = useTranslation();
+  const [t, i18n] = useTranslation();
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -46,26 +46,26 @@ const Navbar = () => {
     {
       type: "divider",
     },
-    i18n.language == "en" && {
+    i18n.language == "En" && {
       label: (
-        <button onClick={() => changeLang("ar")} className="mx-2">
+        <button onClick={() => changeLang("Ar")} className="mx-2">
           {t("navbar.langAr")}
         </button>
       ),
       key: "1",
     },
-    i18n.language == "en" && {
+    i18n.language == "En" && {
       type: "divider",
     },
-    i18n.language == "ar" && {
+    i18n.language == "Ar" && {
       label: (
-        <button onClick={() => changeLang("en")} className="mx-2">
+        <button onClick={() => changeLang("En")} className="mx-2">
           {t("navbar.langEn")}
         </button>
       ),
       key: "2",
     },
-    i18n.language == "ar" && {
+    i18n.language == "Ar" && {
       type: "divider",
     },
     {
@@ -79,10 +79,10 @@ const Navbar = () => {
   const changeLang = (lang) => {
     i18n.changeLanguage(lang);
     window.localStorage.setItem("onMeetingLang", lang);
-    document.body.classList.remove("ar", "en");
+    document.body.classList.remove("Ar", "En");
     document.body.classList.add(lang);
     document.documentElement.setAttribute("lang", lang);
-    document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+    document.documentElement.setAttribute("dir", lang === "Ar" ? "rtl" : "ltr");
   };
 
   // useEffect
@@ -104,7 +104,7 @@ const Navbar = () => {
       >
         <div
           className={`${styles.wrapperLogo} ${
-            i18n.language == "en" ? styles.wrapperLogoEn : ""
+            i18n.language == "En" ? styles.wrapperLogoEn : ""
           } wrapperLogoNav`}
         >
           <Image

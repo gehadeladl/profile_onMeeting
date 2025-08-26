@@ -3,24 +3,31 @@
 
 import { useEffect, useState } from "react";
 import { I18nextProvider } from "react-i18next";
-import i18n from "../lib/i18n";
+import i18n from "./../lib/i18n";
 
 export default function I18nProvider({ children }) {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const lang =
-      window.localStorage.getItem("onMeetingLang") || i18n.language || "ar";
+    const storedLang = window.localStorage.getItem("onMeetingLang");
+    const lang = storedLang || "Ar";
 
-    i18n.changeLanguage(lang).catch(() => {});
+    i18n
+      .changeLanguage(lang)
+      .then(() => {
+        document.documentElement.setAttribute("lang", lang);
+        window.localStorage.setItem("onMeetingLang", lang);
+        document.documentElement.setAttribute(
+          "dir",
+          lang === "Ar" ? "rtl" : "ltr"
+        );
 
-    document.documentElement.setAttribute("lang", lang);
-    document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+        document.body.classList.remove("Ar", "En");
+        document.body.classList.add(lang);
 
-    document.body.classList.remove("ar", "en");
-    document.body.classList.add(lang);
-
-    setReady(true);
+        setReady(true);
+      })
+      .catch(() => setReady(true));
   }, []);
 
   if (!ready) return null;

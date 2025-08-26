@@ -14,73 +14,73 @@
       "bookAppointment": "Book appointment",
       "follow": "Follow",
       "contact": {
-        "phone": "Phone",
         "title": "Contact",
+        "phone": "Phone",
         "email": "Email",
         "facebook": "Facebook",
-        "linkedIn": "LinkedIn",
-        "whatsApp": "WhatsApp",
+        "linkedin": "LinkedIn",
+        "whatsapp": "WhatsApp",
         "instagram": "Instagram"
       }
     }
   },
-  "bookingCalendar" : {
-    "header" : {
-      "title" : "Book appointment "
+  "bookingCalendar": {
+    "header": {
+      "title": "Book appointment"
     },
-    "bookingConfirmation" : {
-      "title" : "Booking Confirmation"
+    "bookingConfirmation": {
+      "title": "Booking Confirmation"
     }
   },
   "about": {
     "title": "About"
   },
   "months": {
-    "jan": "january",
-    "feb": "february",
-    "mar": "march",
-    "apr": "april",
-    "may": "may",
-    "jun": "june",
-    "jul": "july",
-    "aug": "august",
-    "sep": "september",
-    "oct": "october",
-    "nov": "november",
-    "dec": "december"
+    "jan": "January",
+    "feb": "February",
+    "mar": "March",
+    "apr": "April",
+    "may": "May",
+    "jun": "June",
+    "jul": "July",
+    "aug": "August",
+    "sep": "September",
+    "oct": "October",
+    "nov": "November",
+    "dec": "December"
   },
   "days": {
-    "sun": "sun",
-    "mon": "mon",
-    "tue": "tue",
-    "wed": "wed",
-    "thu": "thu",
-    "fri": "fri",
-    "sat": "sat"
+    "sun": "Sun",
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat"
   },
   "but": {
     "bookAppointment": "Book appointment",
     "chooseSuitableTime": "Choose suitable time",
     "chooseAnAppointmentFirst": "Choose an appointment first",
-    "orContactMeDirectly": "or contact me directly",
-    "confirm" : "confirm"
+    "orContactMeDirectly": "Or contact me directly",
+    "confirm": "Confirm"
   },
   "input": {
-  "name": {
-    "title": "Name",
-    "placeholder": "Enter your name",
-    "confirm": "Please enter your name"
-  },
-  "email": {
-    "title": "Email",
-    "placeholder": "Enter your email",
-    "confirm1": "Please enter your email",
-    "confirm2": "Please enter a valid email"
-  },
-  "ReasonForMeeting": {
-    "title": "Reason for Booking",
-    "placeholder": "Write the reason for booking here...",
-    "confirm": "Please enter the reason for booking"
+    "name": {
+      "title": "Name",
+      "placeholder": "Enter your name",
+      "confirm": "Please enter your name"
+    },
+    "email": {
+      "title": "Email",
+      "placeholder": "Enter your email",
+      "confirm1": "Please enter your email",
+      "confirm2": "Please enter a valid email"
+    },
+    "reasonForMeeting": {
+      "title": "Reason for Booking",
+      "placeholder": "Write the reason for booking here...",
+      "confirm": "Please enter the reason for booking"
+    }
   }
-}
 }

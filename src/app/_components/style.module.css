@@ -190,3 +190,20 @@
     display: inline-block;
   }
 }
+
+@media (max-width: 500px) {
+  .content img {
+    width: 30px;
+  }
+  .wrapperLogo input {
+    min-width: 130px !important;
+    height: 30px;
+  }
+  .wrapperLogo button {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .infoUser button svg {
+    font-size: 18px;
+  }
+}

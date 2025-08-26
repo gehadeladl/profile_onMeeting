@@ -19,15 +19,15 @@ body {
   font-family: "Noto Kufi Arabic" !important;
 }
 
-body.en {
+body.En {
   direction: ltr;
   text-align: left;
 }
 .ant-input,
 .ant-drawer-body,
-.ant-dropdown  ,
-.ant-btn , 
-.ant-form-item-label{
+.ant-dropdown,
+.ant-btn,
+.ant-form-item-label {
   font-family: "Noto Kufi Arabic" !important;
 }
 
@@ -77,12 +77,12 @@ body.en {
   -o-border-radius: 3px;
   margin-bottom: 1px;
 }
-.ant-drawer-body button:first-of-type,
+.active,
 .ant-drawer-body button:hover {
   background-color: #eaf5ff;
 }
-.ant-drawer-body button:first-of-type span,
-.ant-drawer-body button:first-of-type svg {
+.active span,
+.active svg {
   color: var(--default-color3--);
 }
 

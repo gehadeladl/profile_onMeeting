@@ -23,7 +23,7 @@ const BookingConfirmation = ({ setBookingConfirmation }) => {
         <h3 className={styles.sectionTitle}>
           <span> {t("bookingCalendar.bookingConfirmation.title")} </span>
           <button onClick={() => setBookingConfirmation(false)}>
-            {i18n.language == "en" ? <IoMdArrowForward /> : <IoMdArrowBack />}
+            {i18n.language == "En" ? <IoMdArrowForward /> : <IoMdArrowBack />}
           </button>
         </h3>
       </div>

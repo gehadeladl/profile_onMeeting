@@ -31,7 +31,6 @@
   box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
   border-radius: 15px;
   padding: 25px;
-  margin-bottom: 25px;
   width: 50%;
   height: 450px;
 }
@@ -111,7 +110,6 @@
   cursor: default;
 }
 
-
 .calendarDay.available {
   color: var(--default-color3--);
   cursor: pointer;
@@ -122,7 +120,6 @@
   color: #1890ff;
   border: 1px solid #1890ff;
 }
-
 
 .calendarDay.available:hover {
   background: var(--default-color3--);
@@ -163,7 +160,7 @@
 .calendarDay.available.hasSlots::after {
   background: white;
 }
-.calendarDay.today.hasSlots::after{
+.calendarDay.today.hasSlots::after {
   background-color: #1890ff;
 }
 /* Time Slots */
@@ -178,6 +175,7 @@
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
+  min-width: 165px;
 }
 
 .selectedDate {
@@ -307,21 +305,24 @@
 }
 /* Responsive Design */
 
-@media(max-width:900px){
-  .wrapperCalendar{
+@media (max-width: 900px) {
+  .wrapperCalendar {
     flex-wrap: wrap;
   }
-  .calendarContainer{
+  .calendarContainer {
     width: 100%;
+    order: 1;
   }
-  .calendarContainer.calendarContainerNoSelectedDate{
+  .calendarContainer.calendarContainerNoSelectedDate {
     width: 70%;
   }
-  .wrapperCalendar > div:nth-of-type(2){
+  .wrapperCalendar > div:nth-of-type(3) {
     width: calc(30% - 20px);
+    order: 2;
   }
-  .bookingInfo{
-    width: 100% ;
+  .bookingInfo {
+    width: 100%;
+    order: 3;
   }
 }
 
@@ -337,19 +338,39 @@
 }
 
 @media (max-width: 700px) {
-  .calendarContainer.calendarContainerNoSelectedDate{
+  .calendarContainer.calendarContainerNoSelectedDate {
     width: 100%;
   }
-  .wrapperCalendar > div:nth-of-type(2){
-    width:  100%;
+  .wrapperCalendar > div:nth-of-type(3) {
+    width: 100%;
   }
 }
 
-@media(max-width:500px){
-  .slotsGrid{
+@media (max-width: 500px) {
+  .calendarContainer {
+    padding: 10px;
+  }
+  .slotsGrid {
     display: block;
   }
-  .timeSlot{
+  .timeSlot {
     margin-bottom: 15px;
+  }
+  .monthYear,
+  .dayHeader,
+  .calendarDay {
+    font-size: 10px;
+  }
+  .dayHeader {
+    width: 40px;
+  }
+  .calendarGrid {
+    gap: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .calendarContainer {
+    overflow: auto;
   }
 }

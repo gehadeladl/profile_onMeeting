@@ -5,10 +5,10 @@ import en from "./locales/en/translation.json";
 import ar from "./locales/ar/translation.json";
 
 const resources = {
-  en: {
+  En: {
     translation: en,
   },
-  ar: {
+  Ar: {
     translation: ar,
   },
 };
@@ -18,7 +18,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "ar",
+    lng: "Ar",
     interpolation: {
       escapeValue: false,
     },

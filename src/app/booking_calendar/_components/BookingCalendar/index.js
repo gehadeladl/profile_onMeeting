@@ -152,28 +152,6 @@ const BookingCalendar = ({ teacher, setBookingConfirmation }) => {
           </div>
         </div>
 
-        <div>
-          {selectedDate && (
-            <div className={styles.timeSlots}>
-              <div className={styles.selectedDate}>
-                {selectedDate} {monthNames[currentMonth.getMonth()]}
-              </div>
-              <div className={styles.slotsGrid}>
-                {availableTimes.map((time) => (
-                  <div
-                    key={time}
-                    className={`${styles.timeSlot} ${
-                      selectedTime === time ? styles.selected : ""
-                    }`}
-                    onClick={() => handleTimeSelect(time)}
-                  >
-                    {time}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
         <div
           className={`${styles.calendarContainer} ${
             selectedDate ? styles.calendarContainerNoSelectedDate : ""
@@ -233,6 +211,26 @@ const BookingCalendar = ({ teacher, setBookingConfirmation }) => {
             ))}
           </div>
         </div>
+        {selectedDate && (
+          <div className={styles.timeSlots}>
+            <div className={styles.selectedDate}>
+              {selectedDate} {monthNames[currentMonth.getMonth()]}
+            </div>
+            <div className={styles.slotsGrid}>
+              {availableTimes.map((time) => (
+                <div
+                  key={time}
+                  className={`${styles.timeSlot} ${
+                    selectedTime === time ? styles.selected : ""
+                  }`}
+                  onClick={() => handleTimeSelect(time)}
+                >
+                  {time}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

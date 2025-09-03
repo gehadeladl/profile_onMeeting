@@ -1,7 +1,7 @@
 .contentCard {
-  background: white;
+  border:1px solid var(--card-bg); 
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+  box-shadow: var(--card-shadow); 
   margin-bottom: 20px;
 }
 
@@ -10,12 +10,12 @@
   align-items: center;
   gap: 12px;
   padding: 20px;
-  border-bottom: 1px solid #f0f2f5;
+  border-bottom: 1px solid var(--card-bg); 
 }
 
 .sectionTitle {
   font-size: 16px;
-  color: #293c7a;
+  color: var(--text-title-color);
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -23,73 +23,87 @@
   width: 100%;
 }
 
-.sectionTitle button{
+.sectionTitle button {
   cursor: pointer;
 }
 
-.sectionTitle button svg{
+.sectionTitle button svg {
   font-size: 18px;
 }
+
 .wrapperConfirm {
   display: flex;
   gap: 20px;
   padding: 20px;
 }
 
-.wrapperConfirm > div{
-    box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+.wrapperConfirm > div {
+  box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
   border-radius: 15px;
   padding: 25px;
   margin-bottom: 25px;
   width: 50%;
   height: 450px;
-}
-.wrapperConfirm input{
-    height: 37px;
-}
-.wrapperConfirm input::placeholder{
-    font-size: 12px;
+  background: var(--card-bg); 
+  color: var(--text-color);   
 }
 
-.wrapperConfirm img{
+.wrapperConfirm input {
+  height: 37px;
+  background: var(--input-bg);   
+  color: var(--input-text);      
+  border: 1px solid var(--border-color);
+}
+.wrapperConfirm label{
+      color: var(--text-color-secondary) !important;
+      font-size: 12px !important;
+}
+.wrapperConfirm input::placeholder {
+  font-size: 11px;
+  color: var(--placeholder-color) !important;
+}
+
+.wrapperConfirm textarea {
+  background: var(--input-bg);  
+  color: var(--input-text);
+  border: 1px solid var(--border-color);
+}
+
+.wrapperConfirm img {
   width: 50px;
   height: 50px;
   margin-bottom: 15px;
   border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
 }
 
-.wrapperConfirm h5{
+.wrapperConfirm h5 {
   font-size: 16px;
   font-weight: bold;
-  color: var(--default-color--);
+  color: var(--default-color--); 
   margin-bottom: 5px;
 }
 
-.wrapperConfirm p{
-    font-size: 14px;
-  color: #666;
+.wrapperConfirm p {
+  font-size: 14px;
+  color: var(--text-color-secondary); 
   margin-bottom: 6px;
 }
 
-.wrapperConfirm h6{
+.wrapperConfirm h6 {
   display: flex;
   align-items: center;
   gap: 5px;
   margin-top: 15px;
-  color: #666;
+  color: var(--text-color-secondary); 
   font-size: 14px;
 }
 
-@media(max-width:700px){
-  .wrapperConfirm{
-  display: block;
-}
+@media (max-width: 700px) {
+  .wrapperConfirm {
+    display: block;
+  }
 
-.wrapperConfirm > div{
-  width: 100%;
-}
+  .wrapperConfirm > div {
+    width: 100%;
+  }
 }

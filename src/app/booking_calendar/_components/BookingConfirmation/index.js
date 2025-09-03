@@ -18,7 +18,7 @@ const BookingConfirmation = ({ setBookingConfirmation }) => {
     console.log("Failed:", errorInfo);
   };
   return (
-    <div className={styles.contentCard}>
+    <div className={`${styles.contentCard} contentCard`}>
       <div className={styles.sectionHeader}>
         <h3 className={styles.sectionTitle}>
           <span> {t("bookingCalendar.bookingConfirmation.title")} </span>

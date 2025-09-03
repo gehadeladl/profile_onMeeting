@@ -108,12 +108,12 @@ const BookingCalendar = ({ teacher, setBookingConfirmation }) => {
   const days = getDaysInMonth(currentMonth);
 
   return (
-    <div className={styles.contentCard}>
-      <div className={styles.sectionHeader}>
+    <div className={`${styles.contentCard} contentCard`}>
+      {/* <div className={styles.sectionHeader}>
         <h3 className={styles.sectionTitle}>
           {t("bookingCalendar.header.title")}
         </h3>
-      </div>
+      </div> */}
 
       <div className={styles.wrapperCalendar}>
         <div className={styles.bookingInfo}>

@@ -24,7 +24,7 @@
   gap: 8px;
 }
 
-.infoUser img {
+.infoUser img { 
   border: 1px solid #ddd;
   width: 40px;
   height: 40px;
@@ -45,6 +45,7 @@
   -moz-border-radius: 18px;
   -ms-border-radius: 18px;
   -o-border-radius: 18px;
+  background-color: var(--input-bg);
 }
 
 .wrapperLogo button {
@@ -55,6 +56,15 @@
   -ms-border-radius: 20px 0 0 20px;
   -o-border-radius: 20px 0 0 20px;
   width: 40px !important;
+  background-color: var(--input-bg);
+}
+.wrapperLogo button svg{
+  color: var(--input-placeholder);
+}
+
+.wrapperLogo button:hover , 
+.wrapperLogo input:hover {
+  background-color: var(--input-bg) !important;
 }
 .wrapperLogoEn button {
   border-radius: 0 20px 20px 0;
@@ -65,6 +75,7 @@
 }
 .wrapperLogo input::placeholder {
   font-size: 12px;
+  color: var(--input-placeholder);
 }
 .menuNavbar button span {
   display: block;
@@ -93,7 +104,7 @@
 }
 
 .menuNavbar button:hover {
-  background-color: #eaf5ff;
+  background-color: var(--card-bg);
 }
 
 .menuNavbar button:hover svg,
@@ -102,7 +113,7 @@
 }
 
 .menuNavbar button.active {
-  background-color: #eaf5ff;
+  background-color: var(--card-bg);
 }
 
 .menuNavbar button.active svg,

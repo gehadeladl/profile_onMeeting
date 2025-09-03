@@ -1,7 +1,7 @@
 .contentCard {
-  background: white;
+  background: var(--card-bg);
   border-radius: 20px;
-  box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+  box-shadow: var(--card-shadow);
   margin-bottom: 20px;
 }
 
@@ -10,14 +10,14 @@
   align-items: center;
   gap: 12px;
   padding: 20px;
-  border-bottom: 2px solid #f0f2f5;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .sectionIcon {
   width: 25px;
   height: 25px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #293c7a, #1890ff);
+  background: linear-gradient(135deg, var(--default-color--), var(--default-color3--));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,14 +30,13 @@
 
 .sectionTitle {
   font-size: 16px;
-  color: #293c7a;
+  color: var(--text-title-color);
   font-weight: bold;
 }
 
 /* About Section */
-
 .aboutContent {
-  color: #555;
+  color: var(--text-color-secondary);
   font-size: 13px;
   line-height: 2;
   margin-bottom: 25px;

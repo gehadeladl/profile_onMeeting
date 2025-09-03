@@ -64,7 +64,10 @@ const Profile = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div
+      className="min-h-screen"
+      style={{ backgroundColor: "var(--bg-color)", color: "var(--text-color)" }}
+    >
       <div className="container mx-auto px-4 py-6 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-8 mt-8">
           <div className="lg:col-span-2">

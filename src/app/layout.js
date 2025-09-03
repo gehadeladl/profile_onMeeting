@@ -1,7 +1,8 @@
 import Navbar from "./_components/navbar";
 import "./globals.css";
 import { Noto_Kufi_Arabic } from "next/font/google";
-import I18nProvider from "./I18nProvider";
+import ThemeProvider from "./(provider)/ThemeProvider";
+import I18nProvider from "./(provider)/I18nProvider";
 
 const notoKufiArabic = Noto_Kufi_Arabic({
   subsets: ["arabic"],
@@ -19,8 +20,10 @@ const RootLayout = ({ children }) => {
     <html>
       <body className={`${notoKufiArabic.variable} `}>
         <I18nProvider>
-          <Navbar />
-          {children}
+          <ThemeProvider>
+            <Navbar />
+            {children}
+          </ThemeProvider>
         </I18nProvider>
       </body>
     </html>

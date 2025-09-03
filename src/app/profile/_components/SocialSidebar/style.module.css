@@ -1,13 +1,13 @@
 .wrapperSocialSidebar {
-  background: white;
+  background: var(--card-bg);
   border-radius: 20px;
-  /* padding: 30px; */
-  box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+  box-shadow: var(--card-shadow);
   overflow: hidden;
   height: 370px;
 }
+
 .wrapperSocialSidebar h6 {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
   padding: 20px;
   color: var(--default-color--);
   font-size: 16px;
@@ -25,11 +25,12 @@
 }
 
 .Social p svg {
-  color: #a9a8a8;
+  color: var(--icon-color);
   font-size: 15px;
 }
+
 .Social p span {
-  color: #666;
+  color: var(--text-color-secondary);
   font-size: 13px;
   margin: 0 5px 0 10px;
 }

@@ -6,11 +6,13 @@ import { BarsOutlined } from "@ant-design/icons";
 import { Drawer, Dropdown, Input, Space } from "antd";
 import Menu from "./menu/menu";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "../(provider)/ThemeProvider";
 
 const { Search } = Input;
 
 const Navbar = () => {
   // state
+  const { theme, toggleTheme } = useTheme();
   const [t, i18n] = useTranslation();
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
@@ -44,6 +46,14 @@ const Navbar = () => {
       key: "0",
     },
     {
+      label: (
+        <button onClick={toggleTheme}>
+          {theme === "light" ? "🌙 داكن" : "☀️ فاتح"}
+        </button>
+      ),
+      key: "1",
+    },
+    {
       type: "divider",
     },
     i18n.language == "En" && {
@@ -52,7 +62,7 @@ const Navbar = () => {
           {t("navbar.langAr")}
         </button>
       ),
-      key: "1",
+      key: "2",
     },
     i18n.language == "En" && {
       type: "divider",
@@ -63,14 +73,14 @@ const Navbar = () => {
           {t("navbar.langEn")}
         </button>
       ),
-      key: "2",
+      key: "3",
     },
     i18n.language == "Ar" && {
       type: "divider",
     },
     {
       label: <a href="https://www.aliyun.com"> {t("navbar.logout")} </a>,
-      key: "3",
+      key: "4",
     },
   ];
 
@@ -108,7 +118,11 @@ const Navbar = () => {
           } wrapperLogoNav`}
         >
           <Image
-            src="/images/logoiconhome.png"
+            src={
+              theme === "dark"
+                ? "/images/logoDark.png"
+                : "/images/logoiconhome.png"
+            }
             width={40}
             height={40}
             alt="logo onMeeting"

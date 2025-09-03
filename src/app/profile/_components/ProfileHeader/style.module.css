@@ -1,15 +1,15 @@
 .profileHeader {
-  background: white;
-  border-radius: 10px;
+  background: var(--card-bg);
+  border-radius: 20px;
   overflow: hidden;
   margin-bottom: 30px;
   position: relative;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+  box-shadow: var(--card-shadow);
   height: 370px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 .coverSection {
@@ -31,16 +31,12 @@
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 3px solid var(--card-bg);
   position: absolute;
   top: -65px;
   right: 100px;
   transform: translateX(50%);
   overflow: hidden;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
 }
 
 .teacherDetails {
@@ -48,26 +44,30 @@
   display: flex;
   justify-content: space-between;
 }
+
 .teacherDetails > div:last-of-type {
   display: flex;
   align-items: center;
   gap: 8px;
 }
+
 .teacherName {
   font-size: 16px;
-  color: #293c7a;
+  color: var(--text-title-color);
   margin-bottom: 5px;
   font-weight: bold;
 }
 
 .teacherTitle {
   font-size: 13px;
-  color: #666;
+  color: var(--text-color);
+  opacity: 0.8;
   margin-bottom: 5px;
 }
 
 .teacherBio {
-  color: #666;
+  color: var(--text-color);
+  opacity: 0.7;
   font-size: 12px;
   line-height: 1.6;
   margin-bottom: 8px;
@@ -75,32 +75,27 @@
 
 .but {
   background: var(--default-color3--);
-  color: white;
+  color: #fff;
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 12px;
   cursor: pointer;
   transition: 0.4s;
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  -ms-transition: 0.4s;
-  -o-transition: 0.4s;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
   display: flex;
   align-items: center;
   gap: 4px;
 }
+
 .but:hover {
   opacity: 0.8;
 }
+
 .but:last-of-type {
   background-color: transparent;
   border: 1px solid var(--default-color3--);
   color: var(--default-color3--);
 }
+
 .coverSection img {
   width: 100% !important;
 }

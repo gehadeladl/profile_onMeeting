@@ -5,8 +5,20 @@
 :root {
   --default-color--: #293c7a;
   --default-color2--: #f67a39;
-  --default-color3--: #1890ff;
+  --default-color3--: #1890ff; 
   --default-color4--: #cbc1f1;
+
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+  --input-placeholder : #9ca3af ;
+  --card-shadow: 0 5px 20px rgba(41, 60, 122, 0.08);
+
+  --text-color: #111827;
+  --text-title-color: #293c7a;
+  --text-color-secondary: #666;
+  --icon-color: #a9a8a8;
+  --border-color: #eee;
+
   --default-font-ar--: "Noto Kufi Arabic", "Noto Sans", sans-serif;
   --default-font-en--: "Noto Sans", "Noto Kufi Arabic", sans-serif;
 }
@@ -23,6 +35,30 @@ body.En {
   direction: ltr;
   text-align: left;
 }
+
+/* 🌙 ألوان خاصة بالدارك مود */
+.dark {
+  --default-color--: #e5e7eb; 
+  --default-color2--: #f97316; 
+  --default-color3--: #6366f1; 
+  --default-color4--: #4b5563; 
+
+  background-color: #111827; 
+  color: #e5e7eb; 
+
+  --card-bg: #1f2937;
+  --input-bg: #1f2937;
+  --input-placeholder : #9ca3af ;
+  --card-shadow: 0 px 0px rgba(255, 255, 255, 0.1);
+  /* --card-shadow: 0 5px 20px rgba(255, 255, 255, 0.1); */
+
+  --text-color: #f3f4f6;
+  --text-title-color: #f3f4f6;
+  --text-color-secondary: #9ca3af;
+  --icon-color: #9ca3af;
+  --border-color: #374151;
+}
+
 .ant-input,
 .ant-drawer-body,
 .ant-dropdown,
@@ -32,25 +68,18 @@ body.En {
 }
 
 /* update image  */
-
 .ant-upload.ant-upload-select {
   width: 35px !important;
   height: 35px !important;
   border-radius: 50% !important;
   border: 1px solid #fff !important;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  -ms-border-radius: 50% !important;
-  -o-border-radius: 50% !important;
   background-color: #fff !important;
 }
-
 .ant-upload.ant-upload-select svg {
   color: var(--default-color3--) !important;
   cursor: pointer;
   font-size: 17px;
 }
-
 .ant-upload-wrapper {
   position: absolute;
   top: 30px;
@@ -58,12 +87,14 @@ body.En {
 }
 
 /* menu navbar  */
-
 .ant-drawer-body {
   padding: 10px 24px !important;
 }
+.ant-drawer-header{
+  border-bottom: 1px solid #666 !important;
+}
 .ant-drawer-body button {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #666;
   padding: 10px;
   width: 100%;
   display: flex;
@@ -71,15 +102,12 @@ body.En {
   gap: 7px;
   cursor: pointer;
   border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   margin-bottom: 1px;
+  color: #666;
 }
 .active,
 .ant-drawer-body button:hover {
-  background-color: #eaf5ff;
+  background-color: var(--input-bg);
 }
 .active span,
 .active svg {
@@ -87,29 +115,21 @@ body.En {
 }
 
 /* menu user navbar  */
-
 .wrapperImageUser {
   min-width: 250px !important;
   overflow: hidden;
   border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   box-shadow: 0 0.1875rem 0.75rem 0 rgba(47, 43, 61, 0.14);
 }
-
 .wrapperImageUser ul .ant-dropdown-menu-item {
   padding: 0 !important;
 }
-
 .wrapperImageUser ul,
 .wrapperImageUser ul .ant-dropdown-menu-item:first-of-type {
   padding: 0 !important;
   background-color: #fff !important;
   cursor: auto;
 }
-
 .wrapperImageUser ul li a,
 .wrapperImageUser ul li button {
   font-size: 13px;
@@ -123,8 +143,17 @@ body.En {
 .wrapperImageUser ul li button {
   margin: 0;
 }
-/* serach navbar  */
 
+.dark .ant-drawer-content{
+  background-color: #111827 !important;
+}
+
+.ant-drawer-content .ant-drawer-close , 
+.ant-drawer-content .ant-drawer-close:hover{
+color: var(--text-color);
+}
+
+/* serach navbar  */
 .ant-input-group-wrapper {
   max-width: 340px !important;
 }

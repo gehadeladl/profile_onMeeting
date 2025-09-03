@@ -7,7 +7,7 @@ const ProfileAbout = ({ teacher }) => {
   const [t, i18n] = useTranslation();
 
   return (
-    <div className={`${styles.contentCard} mt-[40px] lg:mt-0`}>
+    <div className={`${styles.contentCard} contentCard mt-[40px] lg:mt-0`}>
       <div className={styles.sectionHeader}>
         <h3 className={styles.sectionTitle}> {t("about.title")} </h3>
       </div>
